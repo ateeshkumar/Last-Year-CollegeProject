@@ -20,6 +20,7 @@ export const POST_TYPES = {
 export const createPost =
   ({ content, images, auth, socket }) =>
   async (dispatch) => {
+    console.log(content, images, auth, socket);
     let media = [];
     try {
       dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: true } });

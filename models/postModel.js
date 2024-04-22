@@ -4,7 +4,7 @@ const postSchema = new mongoose.Schema(
   {
     content: String,
     images: {
-      type: String,
+      type: Array,
       required: true,
     },
     likes: [{ type: mongoose.Types.ObjectId, ref: "user" }],

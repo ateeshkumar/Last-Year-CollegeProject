@@ -23,11 +23,11 @@ export const imageUpload = async (images) => {
       formData.append("file", item);
     }
 
-    formData.append("upload_preset", "efxjficn");
-    formData.append("cloud_name", "devat-channel");
+    formData.append("upload_preset", "xxhfdobx");
+    formData.append("cloud_name", "dwzrlaiqc");
 
     const res = await fetch(
-      "https://api.cloudinary.com/v1_1/devat-channel/upload",
+      "https://api.cloudinary.com/v1_1/dwzrlaiqc/image/upload",
       {
         method: "POST",
         body: formData,
@@ -35,6 +35,7 @@ export const imageUpload = async (images) => {
     );
 
     const data = await res.json();
+    console.log(data);
     imgArr.push({ public_id: data.public_id, url: data.secure_url });
   }
   return imgArr;
